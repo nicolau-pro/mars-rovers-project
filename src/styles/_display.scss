@@ -1,0 +1,216 @@
+* {
+  color: $primary;
+}
+
+ol,
+ul {
+  margin: 0.5em 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 18px;
+  margin: 0.5em;
+}
+
+.row {
+  background: linear-gradient(to bottom, transparentize($color: $dark, $amount: 0.2), transparentize($color: $dark, $amount: 0.3));
+  display: flex;
+  margin-bottom: 0.5em;
+  padding: 0.5em;
+
+  > * {
+    width: 100%;
+
+    &:first-child {
+      width: 200px;
+    }
+  }
+}
+
+form {
+  label {
+    display: block;
+    margin: 0.5em;
+
+    span {
+      display: inline-block;
+      min-width: 50px;
+    }
+  }
+
+  li {
+    border-top: 1px dashed transparentize($primary, 0.7);
+    margin-right: 0.5em;
+    padding: 0.5em;
+
+    &:last-of-type {
+      border-bottom: 1px dashed transparentize($primary, 0.7);
+    }
+  }
+
+  input,
+  button {
+    text-transform: uppercase;
+  }
+
+  input {
+    margin: 0 0.5em;
+
+    &[type='text'] {
+      background: $highlight;
+      color: $dark;
+      font-size: 100%;
+    }
+
+    &[type='range'] {
+      -webkit-appearance: none;
+      background: none;
+      cursor: pointer;
+
+      &::-webkit-slider-runnable-track {
+        background: transparentize($secondary, 0.6);
+        height: 4px;
+      }
+
+      &:hover {
+        &::-webkit-slider-runnable-track {
+          background: transparentize($secondary, 0);
+        }
+      }
+
+      &::-moz-range-track {
+        background: $secondary;
+        height: 5px;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background: $highlight;
+        cursor: grab;
+        height: 15px;
+        margin-top: -5px;
+        width: 15px;
+
+        &:hover {
+          background: $primary;
+        }
+      }
+
+      &::-moz-range-thumb {
+        background: $highlight;
+        border-radius: 50%;
+        height: 15px;
+        margin-top: -5px;
+        width: 15px;
+      }
+
+      &.grabbing {
+        &::-webkit-slider-thumb {
+          cursor: grabbing;
+        }
+      }
+    }
+  }
+
+  .error {
+    color: $error;
+
+    * {
+      color: $error;
+    }
+  }
+
+  .inputBox {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+
+    > * {
+      background: none;
+      border: 0;
+      height: 30px;
+      line-height: 30px;
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
+
+    > span,
+    > input {
+      flex: 10;
+    }
+
+    > button {
+      background-color: darken($secondary, 15);
+      border: 2px solid $primary;
+      cursor: pointer;
+      flex: 1;
+      line-height: unset;
+      margin-right: 0.75em;
+
+      &:hover {
+        background-color: $error;
+      }
+    }
+
+    > span {
+      text-align: center;
+    }
+
+    .addRover {
+      background-color: darken($secondary, 15);
+      border: 2px solid $primary;
+      cursor: pointer;
+      line-height: unset;
+      max-width: 500px;
+      width: 100%;
+
+      &:hover {
+        background-color: $success;
+      }
+    }
+  }
+
+  .slider {
+    display: flex;
+    margin: 0 0.5em;
+
+    > * {
+      display: inline-block;
+    }
+
+    input {
+      width: 85%;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
+}
+
+ul {
+  list-style: none;
+
+  &.output {
+    background-color: $dark;
+    margin-right: 0.5em;
+
+    li {
+      border-bottom: 1px dashed transparentize($primary, 0.9);
+      padding: 0.2em;
+
+      &:last-of-type {
+        border-bottom: 0;
+      }
+
+      &.lost {
+        background: linear-gradient(to right, darken($error, 42), $dark);
+        color: $error;
+      }
+    }
+  }
+}

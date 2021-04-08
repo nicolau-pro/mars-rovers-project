@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  justify-content: center;
+
+  * {
+    display: inline-block;
+    text-shadow: 0.02em 0.02em $highlight;
+  }
+}

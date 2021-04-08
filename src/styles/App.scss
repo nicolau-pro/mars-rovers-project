@@ -1,0 +1,39 @@
+@import 'colors';
+@import 'mixins';
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+body {
+  background-attachment: fixed;
+  background-color: $highlight;
+  background-image: linear-gradient(to top, transparentize(darken($secondary, 40), 0.3), transparent 60%),
+    linear-gradient(to right, transparentize($secondary, 0.3), transparent, transparent, transparentize($secondary, 0.3)), url('../media/Mars.jpeg');
+  background-position: center;
+  background-size: cover;
+
+  font-size: 140%;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+* {
+  color: $secondary;
+  font-family: 'VT323', monospace;
+  font-weight: normal;
+  outline: none; // in production this would be replaced with something accessible
+}
+
+@import 'header';
+@import 'footer';
+
+main {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 1em;
+  max-width: 1200px;
+  width: 100%;
+  @import 'display';
+}

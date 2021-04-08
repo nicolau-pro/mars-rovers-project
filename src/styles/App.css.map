@@ -1,0 +1,14 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,CAAC,CAAC;EACA,WAAW,EAAE,qBAAqB;CACnC;;AGFD,AAAA,MAAM,CAAC;EACL,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,OAAO,EAAE,MAAQ,CAAC,CAAC;CAKpB;;AARD,AAKE,MALI,CAKJ,CAAC,CAAC;EACA,OAAO,EAAE,YAAY;CACtB;;ACPH,AAAA,MAAM,CAAC;EACL,SAAS,EAAE,IAAQ;EACnB,gBAAgB,EHAP,OAAO;EGChB,OAAO,EAAE,GAAQ;EACjB,UAAU,EAAE,MAAM;EAClB,QAAQ,EAAE,KAAK;EACf,MAAM,EAAE,CAAC;EACT,KAAK,EAAE,IAAI;CAKZ;;AAZD,AASE,MATI,CASJ,CAAC,CAAC;EACA,KAAK,EHFD,OAAO,CGEG,UAAU;CACzB",
+    "sources": [
+        "App.scss",
+        "_colors.scss",
+        "_mixins.scss",
+        "_header.scss",
+        "_footer.scss",
+        "_display.scss"
+    ],
+    "names": [],
+    "file": "App.css"
+}

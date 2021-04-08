@@ -1,0 +1,18 @@
+footer {
+  background: transparentize($color: $dark, $amount: 0.3);
+  bottom: 0;
+  font-size: 16px;
+  padding: 12px;
+  position: fixed;
+  text-align: center;
+  width: 100%;
+
+  a {
+    color: $highlight;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}
